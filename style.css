@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url(img/nature-3616194_1920.jpg);
+  /* background-image: url(img/background.jpg); */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.ocean {
+  height: 200px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+.ocean img {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  animation: water 30s ease-in-out infinite;
+}
+
+.boat {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: boat 3s linear infinite;
+}
+
+.boat img {
+  /* width: 100%; */
+  width: 30rem;
+  height: 32rem;
+  -webkit-box-reflect: below 0
+    linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.6));
+  animation: boat 8s ease-in infinite;
+}
+
+.cloud {
+  position: absolute;
+  right: 0;
+  /* top: 5px; */
+  height: 298px;
+  animation: cloud 100s linear infinite;
+}
+
+@keyframes cloud {
+  0% {
+    transform: translate(0vw);
+  }
+  100% {
+    transform: translateX(700px);
+  }
+}
+
+@keyframes water {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(500px);
+  }
+  100% {
+    transform: translate(1000px);
+  }
+}
+
+@keyframes boat {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-1deg);
+  }
+}
+
+/* .boat{
+      width: 3500%;
+      position: absolute;
+      bottom: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+}
+
+.boat img{
+      width: 100%;
+} */
